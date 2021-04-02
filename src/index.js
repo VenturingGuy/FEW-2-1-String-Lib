@@ -49,3 +49,8 @@ String.prototype.removeExtraSpaces = function () {
 String.prototype.kebabCase = function (sep) {
     return this.toLowerCase().replace(/[^a-zA-Z 0-9]/g, "").removeExtraSpaces().split(' ').join(sep)
 }
+
+// Challenge 6
+String.prototype.snakeCase = function () {
+    return this.kebabCase('_')
+}
