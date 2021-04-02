@@ -9,3 +9,14 @@ String.prototype.capitalize = function () {
 String.prototype.allCaps = function () {
     return this.toUpperCase()
 }
+
+// Challenge 3
+
+String.prototype.capitalizeWords = function () {
+    splitStr = this.split(' ')
+    capStr = []
+    for (let i = 0; i < splitStr.length; i++) {
+        capStr.push(splitStr[i].upperFirst())
+    }
+    return capStr.join(' ')
+}
