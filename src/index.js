@@ -41,5 +41,11 @@ String.prototype.capitalizeHeadline = function () {
 // Challenge 4
 
 String.prototype.removeExtraSpaces = function () {
-    return this.trim().replace(/\t+/g, '').split(' ').filter(item => item != '').join(' ')
+    return this.trim().split(' ').filter(item => item != '').join(' ')
+}
+
+// Challenge 5
+
+String.prototype.kebabCase = function (sep) {
+    return this.toLowerCase().replace(/[^a-zA-Z 0-9]/g, "").removeExtraSpaces().split(' ').join(sep)
 }
