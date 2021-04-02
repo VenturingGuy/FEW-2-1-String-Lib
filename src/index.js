@@ -20,3 +20,20 @@ String.prototype.capitalizeWords = function () {
     }
     return capStr.join(' ')
 }
+
+// Challenge 3 - Bonus
+
+String.prototype.capitalizeHeadline = function () {
+    splitStr = this.split(' ')
+    capStr = []
+    exceptionList = ['the', 'in', 'a', 'an', 'and', 'but', 'for', 'at', 'by', 'from']
+    for (let i = 0; i < splitStr.length; i++) {
+        if (i >= 1 && exceptionList.includes(splitStr[i])) {
+            capStr.push(splitStr[i])
+        }
+        else {
+            capStr.push(splitStr[i].upperFirst())
+        }
+    }
+    return capStr.join(' ')
+}
