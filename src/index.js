@@ -32,7 +32,7 @@ String.prototype.capitalizeHeadline = function () {
             capStr.push(splitStr[i])
         }
         else {
-            capStr.push(splitStr[i].upperFirst())
+            capStr.push(splitStr[i].capitalize())
         }
     }
     return capStr.join(' ')
