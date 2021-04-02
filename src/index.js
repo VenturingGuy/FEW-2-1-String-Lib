@@ -54,3 +54,13 @@ String.prototype.kebabCase = function (sep) {
 String.prototype.snakeCase = function () {
     return this.kebabCase('_')
 }
+
+// Challenge 7
+String.prototype.camelCase = function () {
+    splitStr = this.toLowerCase().split(' ')
+    camelStr = [splitStr[0]]
+    for (let i = 1; i < splitStr.length; i++) {
+        camelStr.push(splitStr[i][0].toUpperCase() + splitStr[i].slice(1))
+    }
+    return camelStr.join('')
+}
