@@ -37,3 +37,9 @@ String.prototype.capitalizeHeadline = function () {
     }
     return capStr.join(' ')
 }
+
+// Challenge 4
+
+String.prototype.removeExtraSpaces = function () {
+    return this.trim().replace(/\t+/g, '').split(' ').filter(item => item != '').join(' ')
+}
