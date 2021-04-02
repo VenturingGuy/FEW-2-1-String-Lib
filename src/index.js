@@ -6,3 +6,6 @@ String.prototype.capitalize = function () {
 
 // Challenge 2
 
+String.prototype.allCaps = function () {
+    return this.toUpperCase()
+}
