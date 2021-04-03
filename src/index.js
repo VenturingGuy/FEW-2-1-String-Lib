@@ -64,3 +64,8 @@ String.prototype.camelCase = function () {
     }
     return camelStr.join('')
 }
+
+// Challenge 8
+String.prototype.shift = function (amt) {
+    return this.slice(amt) + this.slice(0, amt)
+}
