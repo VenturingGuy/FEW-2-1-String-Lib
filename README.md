@@ -19,3 +19,5 @@ To use:
 ```
 console.log([yourStringHere].upperFirst())
 ```
+
+npm page: https://www.npmjs.com/package/luis-vent-stringlib
