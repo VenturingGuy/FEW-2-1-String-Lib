@@ -1,6 +1,6 @@
 {
   "name": "luis-vent-stringlib",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Developmental library for String in javascript.",
   "main": "index.js",
   "scripts": {
