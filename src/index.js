@@ -51,6 +51,7 @@ String.prototype.kebabCase = function (sep) {
 }
 
 // Challenge 6
+
 String.prototype.snakeCase = function () {
     return this.kebabCase('_')
 }
@@ -66,11 +67,13 @@ String.prototype.camelCase = function () {
 }
 
 // Challenge 8
+
 String.prototype.shift = function (amt) {
     return this.slice(amt) + this.slice(0, amt)
 }
 
 // Challenge 9
+
 String.prototype.makeHashTag = function () {
     let hashLength = 3
     list = this.split(' ')
@@ -82,4 +85,15 @@ String.prototype.makeHashTag = function () {
         list[i] = '#' + list[i].toLowerCase()
     }
     return list.slice(0, hashLength)
+}
+
+// Challenge 10
+String.prototype.isEmpty = function () {
+    this.trim()
+    for (let i = 0; i < this.length; i++) {
+        if (this[i] != ' ') {
+            return false
+        }
+    }
+    return true
 }
