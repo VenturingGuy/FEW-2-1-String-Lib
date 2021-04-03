@@ -1,12 +1,12 @@
 {
-  "name": "src",
-  "version": "1.0.0",
-  "description": "",
+  "name": "luis-vent-stringlib",
+  "version": "1.0.1",
+  "description": "Developmental library for String in javascript.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Luis Ventura",
   "license": "ISC"
 }
