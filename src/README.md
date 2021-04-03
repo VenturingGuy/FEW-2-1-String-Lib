@@ -1,4 +1,5 @@
 Author: Luis Ventura
+
 This is a developmental library for Strings in javascript.
 
 To install,
