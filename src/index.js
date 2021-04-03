@@ -69,3 +69,17 @@ String.prototype.camelCase = function () {
 String.prototype.shift = function (amt) {
     return this.slice(amt) + this.slice(0, amt)
 }
+
+// Challenge 9
+String.prototype.makeHashTag = function () {
+    let hashLength = 3
+    list = this.split(' ')
+    list.sort(function (a, b) { return b.length - a.length })
+    if (hashLength > list.length) {
+        hashLength = list.length
+    }
+    for (let i = 0; i < hashLength; i++) {
+        list[i] = '#' + list[i].toLowerCase()
+    }
+    return list.slice(0, hashLength)
+}
