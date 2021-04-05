@@ -17,7 +17,7 @@ This function serves to capitalize the first letter in a string.
 
 To use:
 ```
-console.log([yourStringHere].capitalize())
+[yourStringHere].capitalize()
 ```
 
 npm page: https://www.npmjs.com/package/luis-vent-stringlib
