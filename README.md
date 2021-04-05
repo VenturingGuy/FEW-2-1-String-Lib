@@ -1,4 +1,4 @@
-https://img.shields.io/bundlephobia/min/luis-vent-stringlib
+![npm bundle size](https://img.shields.io/bundlephobia/min/luis-vent-stringlib)
 
 Author: Luis Ventura
 
