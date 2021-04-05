@@ -1,3 +1,5 @@
+https://img.shields.io/bundlephobia/min/luis-vent-stringlib
+
 Author: Luis Ventura
 
 This is a developmental library for Strings in javascript.
