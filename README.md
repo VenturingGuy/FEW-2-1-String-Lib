@@ -9,7 +9,7 @@ To install,
 
 Sample Code:
 ```
-String.prototype.upperFirst = function() {
+String.prototype.capitalize = function() {
   return this[0].toUpperCase() + this.slice(1)
 }
 ```
@@ -17,7 +17,7 @@ This function serves to capitalize the first letter in a string.
 
 To use:
 ```
-console.log([yourStringHere].upperFirst())
+console.log([yourStringHere].capitalize())
 ```
 
 npm page: https://www.npmjs.com/package/luis-vent-stringlib
