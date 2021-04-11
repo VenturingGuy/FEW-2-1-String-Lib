@@ -1,41 +1,58 @@
 // Challenge 1
 
+function capitalize(str) {
+    return str[0].toUpperCase() + str.slice(1)
+}
+
 String.prototype.capitalize = function () {
-    return this[0].toUpperCase() + this.slice(1)
+    return capitalize(this)
 }
 
 // Challenge 2
 
+function allCaps(str) {
+    return str.toUpperCase()
+}
+
 String.prototype.allCaps = function () {
-    return this.toUpperCase()
+    return allCaps(this)
 }
 
 // Challenge 3
 
-String.prototype.capitalizeWords = function () {
-    splitStr = this.split(' ')
-    capStr = []
+function capitalizeWords(str) {
+    const splitStr = str.split(' ')
+    let capStr = []
     for (let i = 0; i < splitStr.length; i++) {
-        capStr.push(splitStr[i].upperFirst())
+        capStr.push(splitStr[i].capitalize())
     }
     return capStr.join(' ')
 }
 
+String.prototype.capitalizeWords = function () {
+    return capitalizeWords(this)
+}
+
 // Challenge 3 - Bonus
 
-String.prototype.capitalizeHeadline = function () {
-    splitStr = this.split(' ')
-    capStr = []
-    exceptionList = ['the', 'in', 'a', 'an', 'and', 'but', 'for', 'at', 'by', 'from']
-    for (let i = 0; i < splitStr.length; i++) {
-        if (i >= 1 && exceptionList.includes(splitStr[i])) {
-            capStr.push(splitStr[i])
+
+function capitalizeHeadline(str) {
+    const splitStr = str.split(' ')
+    let capStr = []
+    const exceptionList = ['the', 'in', 'a', 'an', 'and', 'but', 'for', 'at', 'by', 'from']
+    splitStr.forEach((word, index) => {
+        if (index >=1 && exceptionList.includes(word)) {
+            capStr.push(word)
         }
         else {
-            capStr.push(splitStr[i].capitalize())
+            capStr.push(word.capitalize())
         }
-    }
+    })
     return capStr.join(' ')
+}
+
+String.prototype.capitalizeHeadline = function () {
+    return capitalizeHeadline(this)
 }
 
 // Challenge 4
@@ -91,7 +108,7 @@ String.prototype.makeHashTag = function () {
 String.prototype.isEmpty = function () {
     this.trim()
     for (let i = 0; i < this.length; i++) {
-        if (this[i] != ' ') {
+        if (this[i] !== ' ') {
             return false
         }
     }
