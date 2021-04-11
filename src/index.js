@@ -57,60 +57,94 @@ String.prototype.capitalizeHeadline = function () {
 
 // Challenge 4
 
+function removeExtraSpaces(str) {
+    return str.trim().split(' ').filter(item => item !== '').join(' ')
+}
+
 String.prototype.removeExtraSpaces = function () {
-    return this.trim().split(' ').filter(item => item != '').join(' ')
+    return removeExtraSpaces(this)
 }
 
 // Challenge 5
 
+function kebabCase(str, sep) {
+    return str.toLowerCase().replace(/[^a-zA-Z 0-9]/g, "").removeExtraSpaces().split(' ').join(sep)
+}
+
 String.prototype.kebabCase = function (sep) {
-    return this.toLowerCase().replace(/[^a-zA-Z 0-9]/g, "").removeExtraSpaces().split(' ').join(sep)
+    return kebabCase(this, sep)
 }
 
 // Challenge 6
 
+function snakeCase(str) {
+    return str.kebabCase('_')
+}
+
 String.prototype.snakeCase = function () {
-    return this.kebabCase('_')
+    return snakeCase(this)
 }
 
 // Challenge 7
-String.prototype.camelCase = function () {
-    splitStr = this.toLowerCase().split(' ')
-    camelStr = [splitStr[0]]
-    for (let i = 1; i < splitStr.length; i++) {
-        camelStr.push(splitStr[i][0].toUpperCase() + splitStr[i].slice(1))
-    }
+
+function camelCase(str) {
+    const splitStr = str.toLowerCase().split(' ')
+    let camelStr = []
+    splitStr.forEach((word, index) => {
+        if (index >= 1) {
+            camelStr.push(word.capitalize())
+        }
+        else {
+            camelStr.push(word)
+        }
+    })
     return camelStr.join('')
+}
+
+String.prototype.camelCase = function () {
+    return camelCase(this)
 }
 
 // Challenge 8
 
+function shift(str, amt) {
+    return str.slice(amt) + str.slice(0, amt)
+}
+
 String.prototype.shift = function (amt) {
-    return this.slice(amt) + this.slice(0, amt)
+    return shift(this, amt)
 }
 
 // Challenge 9
 
-String.prototype.makeHashTag = function () {
+function makeHashTag(str) {
     let hashLength = 3
-    list = this.split(' ')
+    const list = str.split(' ')
     list.sort(function (a, b) { return b.length - a.length })
     if (hashLength > list.length) {
         hashLength = list.length
     }
-    for (let i = 0; i < hashLength; i++) {
+    for (let i = 0; i < hashLength; i += 1) {
         list[i] = '#' + list[i].toLowerCase()
     }
     return list.slice(0, hashLength)
 }
 
+String.prototype.makeHashTag = function () {
+    return makeHashTag(this)
+}
+
 // Challenge 10
-String.prototype.isEmpty = function () {
-    this.trim()
-    for (let i = 0; i < this.length; i++) {
-        if (this[i] !== ' ') {
+
+function isEmpty(str) {
+    str.trim()
+    for (let i = 0; i < str.length; i += 1) {
+        if (str[i] !== ' ') {
             return false
         }
     }
     return true
+}
+String.prototype.isEmpty = function () {
+    return isEmpty(this)
 }
