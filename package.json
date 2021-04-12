@@ -1,12 +1,27 @@
 {
-  "name": "luis-vent-stringlib",
-  "version": "1.0.4",
-  "description": "Developmental library for String in javascript.",
+  "name": "FEW-2-1-String-Lib",
+  "version": "1.0.0",
+  "description": "![npm bundle size](https://img.shields.io/bundlephobia/min/luis-vent-stringlib)",
   "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VenturingGuy/FEW-2-1-String-Lib.git"
   },
   "keywords": [],
-  "author": "Luis Ventura",
-  "license": "ISC"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VenturingGuy/FEW-2-1-String-Lib/issues"
+  },
+  "homepage": "https://github.com/VenturingGuy/FEW-2-1-String-Lib#readme"
 }

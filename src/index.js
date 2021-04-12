@@ -1,6 +1,9 @@
 // Challenge 1
 
 function capitalize(str) {
+    if (str.isEmpty()) {
+        return str
+    }
     return str[0].toUpperCase() + str.slice(1)
 }
 
@@ -88,7 +91,7 @@ String.prototype.snakeCase = function () {
 // Challenge 7
 
 function camelCase(str) {
-    const splitStr = str.toLowerCase().split(' ')
+    const splitStr = str.toLowerCase().replace(/[^a-zA-Z 0-9]/g, "").removeExtraSpaces().split(' ')
     let camelStr = []
     splitStr.forEach((word, index) => {
         if (index >= 1) {
@@ -119,15 +122,18 @@ String.prototype.shift = function (amt) {
 
 function makeHashTag(str) {
     let hashLength = 3
-    const list = str.split(' ')
+    const list = str.toLowerCase().replace(/[^a-zA-Z 0-9]/g, "").removeExtraSpaces().split(' ')
     list.sort(function (a, b) { return b.length - a.length })
     if (hashLength > list.length) {
         hashLength = list.length
     }
-    for (let i = 0; i < hashLength; i += 1) {
-        list[i] = '#' + list[i].toLowerCase()
+    if (str.isEmpty() === false) {
+        for (let i = 0; i < hashLength; i += 1) {
+            list[i] = '#' + list[i]
+        }
+        return list.slice(0, hashLength)
     }
-    return list.slice(0, hashLength)
+    return str
 }
 
 String.prototype.makeHashTag = function () {
@@ -145,6 +151,19 @@ function isEmpty(str) {
     }
     return true
 }
+
 String.prototype.isEmpty = function () {
     return isEmpty(this)
 }
+
+module.exports.capitalize = capitalize
+module.exports.allCaps = allCaps
+module.exports.capitalizeWords = capitalizeWords
+module.exports.capitalizeHeadline = capitalizeHeadline
+module.exports.removeExtraSpaces = removeExtraSpaces
+module.exports.kebabCase = kebabCase
+module.exports.snakeCase = snakeCase
+module.exports.camelCase = camelCase
+module.exports.shift = shift
+module.exports.makeHashTag = makeHashTag
+module.exports.isEmpty = isEmpty
