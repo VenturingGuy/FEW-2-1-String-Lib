@@ -103,6 +103,3 @@ test('Test isEmpty', () => {
             `)).toBe(true)
 })
 
-test('Sanity check', () => {
-    expect(2+2).toBe(4)
-})
