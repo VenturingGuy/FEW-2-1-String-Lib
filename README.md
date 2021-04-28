@@ -1,6 +1,6 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/min/luis-vent-stringlib)
-
 [![Coverage Status](https://coveralls.io/repos/github/VenturingGuy/FEW-2-1-String-Lib/badge.svg?branch=master)](https://coveralls.io/github/VenturingGuy/FEW-2-1-String-Lib?branch=master)
+[![Build Status](https://travis-ci.com/VenturingGuy/FEW-2-1-String-Lib.svg?branch=master)](https://travis-ci.com/VenturingGuy/FEW-2-1-String-Lib)
 
 Author: Luis Ventura
 
